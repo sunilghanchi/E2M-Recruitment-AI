@@ -111,7 +111,7 @@ export default function Page() {
       if (jdText && !jdFile) form.append('jd_text', jdText)
       resumes.forEach(f => form.append('resumes', f))
       
-      const base = process.env.NEXT_PUBLIC_API_BASE || 'https://e2-m-recruitment-ai-lshj.vercel.app'
+      const base = process.env.NEXT_PUBLIC_API_BASE
       const resp = await fetch(`${base}/api/match`, { 
         method: 'POST', 
         body: form 
@@ -141,7 +141,7 @@ export default function Page() {
 
     setLoading(true)
     try {
-      const base = process.env.NEXT_PUBLIC_API_BASE || 'https://e2-m-recruitment-ai-lshj.vercel.app'
+      const base = process.env.NEXT_PUBLIC_API_BASE
       const resp = await fetch(`${base}/api/generate_jd`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
