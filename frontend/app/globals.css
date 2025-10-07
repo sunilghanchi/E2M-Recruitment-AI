@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-dark text-gray-100 antialiased;
+  background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+input, textarea, select {
+  @apply bg-dark-secondary border border-gray-700 text-gray-100 rounded-lg px-3 py-2.5 md:px-4 md:py-2.5 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all;
+}
+
+input::placeholder, textarea::placeholder {
+  @apply text-gray-500;
+}
+
+button:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-orange-400;
+}
+
+.card {
+  @apply bg-dark-secondary border border-gray-800 rounded-xl p-4 md:p-6 shadow-lg transition-all hover:border-gray-700;
+}
+
+.btn-primary {
+  @apply bg-gradient-orange text-white font-semibold px-5 py-2.5 md:px-6 md:py-3 rounded-lg hover:opacity-90 transition-all transform hover:scale-105 active:scale-95 disabled:transform-none disabled:hover:opacity-50;
+}
+
+.btn-secondary {
+  @apply bg-dark-tertiary text-gray-100 border border-gray-700 font-semibold px-5 py-2.5 md:px-6 md:py-3 rounded-lg hover:border-primary transition-all;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-600;
+}
+
+@media (max-width: 768px) {
+  .card {
+    @apply p-4;
+  }
+}
