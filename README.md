@@ -128,14 +128,26 @@ Three ways to provide JD:
 - AI-generated interview invitation for top candidate
 - Rejection email templates for other candidates
 
-## Example Test Case
+## Example Test Files
 
-**Sample JD Requirements:**
-- Job Title: Frontend Developer
-- Skills: React, Next.js, TypeScript, Tailwind CSS
+Sample files are available in the `examples/` folder for testing:
+
+**Resume Files:**
+- `SANJAY VISHWAKARMA_AIML Engineer_10_09_25.pdf` - AI/ML Engineer with relevant experience
+- `Sunil_Ghanchi_AI_ML.pdf` - AI/ML professional with different skill set
+
+**How to Test:**
+1. Use the AI JD Generation feature to create a job description for "AI/ML Engineer"
+2. Upload the sample resume files from the `examples/` folder
+3. Compare matching scores and AI-generated emails
+4. Test with different job requirements to see score variations
+
+**Sample JD Requirements for Testing:**
+- Job Title: AI/ML Engineer
+- Skills: Python, Machine Learning, Deep Learning, TensorFlow, PyTorch
 - Experience: 3+ years
-
-Upload resumes with varying skill sets to see matching scores and AI-generated emails.
+- Industry: Technology
+- Location: Remote/Hybrid
 
 ## Technical Stack
 
